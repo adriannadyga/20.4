@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = (env) => {
-    const environment = env;
+    const environment = env || 'production';
     return {
         mode: environment,
         entry:'./src/index.js',
