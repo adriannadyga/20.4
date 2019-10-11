@@ -4,14 +4,17 @@ import Title from '../components/Title.js';
 class App extends React.Component {
     constructor(props) {
         super(props);
+        //początkowy stan aplikacji
         this.state = {
             data: []
         };
     }
 
+    //metoda dodawania nowych elementów
     addTodo(val) {
         const todo = {
             text: val,
+            //właściwość id unikalna dla każdego obiektu todo
             id: uuid.v4(),
         };
         const data = [...this.state.data, todo];
@@ -19,6 +22,7 @@ class App extends React.Component {
     }
 
     removeTodo(id) {
+        //metoda filter tworzy nową tablicę z odfiltrowanymi elementami
         const reminder = this.state.data.filter(todo => todo.id !== id);
         this.setState({data: reminder});
     }
@@ -26,7 +30,7 @@ class App extends React.Component {
     render() {
         return (
             <div className={style.TodoApp}>
-                Tutaj pojawią się komponenty aplikacji
+                <Title data={this.state.data}/>
             </div>
         );
     }
