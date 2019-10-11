@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './App.css';
-
+import Title from '../components/Title.js';
 class App extends React.Component {
     constructor(props) {
         super(props);
