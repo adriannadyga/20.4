@@ -10,7 +10,7 @@ class Title extends React.Component {
                 <div className="title">
                     Todo list React app
                 </div>
-                <p className="taskNumber">{this.props.data.length}</p>
+                <p className="taskNumber">Number of tasks to do: {this.props.data.length}</p>
             </div>
         )
     }
