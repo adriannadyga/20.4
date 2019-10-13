@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './Title.css';
 
 class Title extends React.Component {
     constructor(props) {
@@ -7,10 +8,10 @@ class Title extends React.Component {
     render() {
         return (
             <div>
-                <div className="title">
+                <div className={style.title}>
                     Todo list React app
                 </div>
-                <p className="taskNumber">Number of tasks to do: {this.props.data.length}</p>
+                <p className={style.taskNumber}>Number of tasks to do: {this.props.data.length}</p>
             </div>
         )
     }
