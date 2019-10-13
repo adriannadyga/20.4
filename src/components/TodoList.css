@@ -1,0 +1,22 @@
+.onList {
+    list-style-type: none;
+    font-size: 18px;
+    margin: 20px;
+    padding: 3px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    transition: 0.6s;
+}
+
+.onList:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.2);
+}
+
+.button {
+    border: none;
+    background-color: transparent;
+    color: #ff0000;
+    font-size: 18px;
+    float: right;
+}
