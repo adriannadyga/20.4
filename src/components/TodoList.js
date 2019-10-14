@@ -19,8 +19,7 @@ import style from './TodoList.css';
 //     }
 // }
 
-const TodoList = (props) => {
-    return (
+const TodoList = (props) => (
         <ul>
             {props.data.map(item => {
                 return <li className={style.onList} key={item.id}>{item.text}
@@ -28,7 +27,6 @@ const TodoList = (props) => {
                 </li>
             })}
         </ul>
-    );
-}
+)
 
 export default TodoList;

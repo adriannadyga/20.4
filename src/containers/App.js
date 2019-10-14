@@ -39,10 +39,11 @@ class App extends React.Component {
     }
 
     render() {
+        const data = this.state.data;
         return (
             <div className={style.TodoApp}>
-                <Title data={this.state.data}/>
-                <TodoList data={this.state.data} delete={this.removeTodo.bind(this)}/>
+                <Title data={data}/>
+                <TodoList data={data} delete={this.removeTodo.bind(this)}/>
             </div>
         );
     }
