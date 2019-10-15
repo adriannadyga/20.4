@@ -21,11 +21,11 @@ import style from './TodoList.css';
 
 const TodoList = (props) => (
         <ul>
-            {props.data.map(item => {
-                return <li className={style.onList} key={item.id}>{item.text}
+            {props.data.map(item => (
+                <li className={style.onList} key={item.id}>{item.text}
                 <button className={style.button} onClick={()=> props.delete(item.id)}>x</button>
                 </li>
-            })}
+            ))}
         </ul>
 )
 
