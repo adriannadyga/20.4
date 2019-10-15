@@ -1,5 +1,6 @@
 import React from 'react';
-import style from './TodoList.css';
+import Todo from './Todo.js';
+// import style from './TodoList.css';
 
 // class TodoList extends React.Component {
 //     constructor(props) {
@@ -20,15 +21,11 @@ import style from './TodoList.css';
 // }
 
 const TodoList = (props) => {
+    const todoListElements = props.data.map(item => <Todo id={item.id} key={item.id} delete={props.delete} text={item.text} />)
     return (
         <ul>
-            {props.data.map(item => {
-                return <li className={style.onList} key={item.id}>{item.text}
-                <button className={style.button} onClick={()=> props.delete(item.id)}>x</button>
-                </li>
-            })}
+            {todoListElements}
         </ul>
     );
 }
-
 export default TodoList;
